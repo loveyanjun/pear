@@ -1,0 +1,7 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #f2d9f2;
+    height: 700px;
+}
