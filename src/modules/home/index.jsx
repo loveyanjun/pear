@@ -12,7 +12,16 @@ export default class Home extends React.PureComponent {
             //     <Route path='/nav' component={Nav}/>
             // </div>
             // </Router>
-            <div>home页面</div>
+
+            <Router>
+            <div className="home">
+                <Link to="/nav">Modus Create</Link>
+                <Route path='/nav' component={Nav}/>
+                {/* <Route path='/:id' component={Child} /> */}
+            </div>
+            </Router>
+            
+            // <div>home页面</div>
         )
     }
 }

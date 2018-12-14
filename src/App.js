@@ -29,7 +29,7 @@
 // export default App;
 
 import React from 'react'
-import { HashRouter, Switch, Route } from 'react-router-dom'
+import { HashRouter, Switch, Route, BrowserRouter as Router, Link } from 'react-router-dom'
 import routes from './routes'
 
 const basicRoute = () => (
