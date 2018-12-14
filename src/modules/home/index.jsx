@@ -1,13 +1,18 @@
 import React from 'react'
+import { Link, Route, BrowserRouter as Router } from 'react-router-dom'
 import Nav from '../nav/index'
 import './styles/index.css'
 
 export default class Home extends React.PureComponent {
     render () {
         return (
-            <div className="home">
-                <Nav/>
-            </div>
+            // <Router>
+            // <div className="home">
+            //     <Link to="/nav">Modus Create</Link>
+            //     <Route path='/nav' component={Nav}/>
+            // </div>
+            // </Router>
+            <div>home页面</div>
         )
     }
 }

@@ -15,16 +15,24 @@
 // export default basicRoute
 
 import React from 'react'
-// import Nav from '../nav/index'
+import { Link, Route, BrowserRouter as Router } from 'react-router-dom'
+import Nav from './nav/index'
+// import Home from './home/index'
 // import './styles/index.css'
 
-export default class Home extends React.PureComponent {
+export default class Wrapper extends React.PureComponent {
     render () {
         return (
+            <Router>
             <div className="home">
-                {/* // <Nav/> */}
-                真正的主页面
+                <Link to="/nav">Modus Create</Link>
+                <Route path='/nav' component={Nav}/>
             </div>
+            </Router>
+            // <div className="home">
+            //     <Nav/>
+            //     <Home />
+            // </div>
         )
     }
 }
