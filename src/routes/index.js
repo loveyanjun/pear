@@ -2,9 +2,9 @@
 import Wrapper from '../modules/index'
 import Home from '../modules/home'
 import Nav from '../modules/nav'
-import Technology from '../modules/technology/index'
-import Project from '../modules/project/index'
-import Life from '../modules/life/index'
+// import Technology from '../modules/technology/index'
+// import Project from '../modules/project/index'
+// import Life from '../modules/life/index'
 
 const routes = [{
     path: '/',
