@@ -1,38 +1,36 @@
-// import React from 'react'
-// import { HashRouter, Switch, Route } from 'react-router-dom'
-// import routes from '../routes'
-
-// const basicRoute = () => (
-//     <HashRouter>
-//         <Switch>
-//             {routes.map(route => (
-//                 <Route key={route.path} path={route.path} exact={route.exact} component={route.component} />
-//             ))}
-//         </Switch>
-//     </HashRouter>
-// );
-
-// export default basicRoute
-
 import React from 'react'
-import { Link, Route, BrowserRouter as Router } from 'react-router-dom'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Nav from './nav/index'
 import Home from './home/index'
-// import './styles/index.css'
+import Technology from './technology/index'
+import Project from './project/index'
+import Life from './life/index'
+import './styles/index.css'
 
 export default class Wrapper extends React.PureComponent {
     render () {
         return (
-            // <Router>
-            // <div className="home">
-            //     <Link to="/nav">Modus Create</Link>
-            //     <Route path='/nav' component={Nav}/>
-            // </div>
-            // </Router>
-            <div className="home">
-                <Nav/>
-                <Home />
-            </div>
+            <Router>
+                {/* 这里需要div包裹下面的元素，不然会报错 */}
+                <div className='wrapper'>
+                    <Nav/>
+                    <div className='routes'>
+                    <Route path='/home' component={Home}/>
+                    <Route path='/technology' component={Technology}/>
+                    <Route path='/project' component={Project}/>
+                    <Route path='/life' component={Life}/>
+                    </div>
+                </div>
+            </Router>
         )
     }
 }
+
+// <Router>
+//     <div>
+//         <Link to="/Nav">技术相关</Link><br/>
+//         <Link to="/Archives">档案相关</Link>
+//         <Route path='/nav' component={Nav}/>
+//         <Route path='/archives' component={Archives}/>
+//     </div>
+// </Router>

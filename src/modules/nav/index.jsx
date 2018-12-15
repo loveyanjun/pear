@@ -1,23 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import avatar from '../../static/images/avatar.jpg'
 import './styles/index.css'
 
-export default class Home extends React.PureComponent {
+export default class Nav extends React.PureComponent {
     handleHistory = () => {
         this.props.history.push('/home')
     }
+
     render () {
         return (
-            <div className="navigation">
-                <div className="person">
-                    <div>头像</div>
-                    <div>君君的网站</div>
+            <div className='nav'>
+                <div className='avatar'>
+                    <img className='avatar-img' src={avatar} alt=""/>
+                    <div>君君的博客</div>
                 </div>
-                <div className="navigate">
-                <ul>
-                    <li onClick={this.handleHistory}>主页</li>
-                    <li>d3展示</li>
-                    <li><a href="#/home">链接进入详情页</a></li>
-                </ul>
+                <div className='link'>
+                    <Link className='link-txt' to='/home'>首页</Link>
+                    <Link className='link-txt' to="/Technology">技术相关</Link>
+                    <Link className='link-txt' to="/Project">项目实战</Link>
+                    <Link className='link-txt' to="/Life">生活相关</Link>
+                    {this.props.children}
                 </div>
             </div>
         )

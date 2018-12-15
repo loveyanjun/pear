@@ -1,6 +1,30 @@
-.navigation {
+.nav {
     width: 250px;
-    height: 100%;
-    background: #983498;
-    color: '#fff'
+    height: 570px;
+    background: #111622;
+    color: #999;
+    padding: 40px 30px 30px 40px;
+}
+
+.nav .avatar {
+    text-align: center;
+}
+
+.avatar-img {
+    margin-bottom: 10px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.link {
+    margin-top: 20px;
+}
+
+.link-txt {
+    text-decoration: none;
+    color: #999;
+    height: 40px;
+    line-height: 40px;
+    display: block;
 }
